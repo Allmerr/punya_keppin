@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-<h1>Tambah Kelas</h1>
+<h1>Tambah Guru</h1>
 </center>
 
 <form action="{{ route('guru.store') }}" class="container-form" method="POST">

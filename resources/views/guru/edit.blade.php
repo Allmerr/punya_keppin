@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-<h1>Tambah Kelas</h1>
+<h1>Ubah Guru</h1>
 </center>
 
 <form action="{{ route('guru.update', $guru->id) }}" class="container-form" method="POST">
@@ -32,7 +32,7 @@
         <input type="password" id="password" name="password" value="{{ $guru->password }}">
     </div>
 
-    <button type="submit" class="button-primary">Tambah</button>
+    <button type="submit" class="button-primary">Ubah</button>
 </form>
 @endsection
 

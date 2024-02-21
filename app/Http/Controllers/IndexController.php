@@ -19,7 +19,8 @@ class IndexController extends Controller
             $guru = Guru::where('id', session('id'))->first();
             $response['nama'] = $guru->nama_guru;
         }else if(session('type_user') === 'admin'){
-            $response['nama'] = 'admin';
+            $admin = Administrator::where('id', session('id'))->first();
+            $response['nama'] = $admin->kode_admin;
         }
 
         return view('home', $response);

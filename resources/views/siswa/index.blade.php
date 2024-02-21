@@ -2,7 +2,7 @@
 @section('content')
 <center>
 
-    <h2>Data Kelas</h2>
+    <h2>Data Siswa</h2>
     <a href="{{ route('siswa.create') }}" class="button-primary">Tambah Siswa</a>
     <table class="table-data">
         <thead>

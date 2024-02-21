@@ -88,7 +88,6 @@ class SiswaController extends Controller
      */
     public function update(Request $request, Siswa $siswa)
     {
-        // dd($request, $request->nis == $siswa->nis && $request->nama_siswa == $siswa->nama_siswa && $request->jk == $siswa->jk && $request->alamat == $siswa->alamat && $request->kelas_id == $siswa->kelas_id && $request->password == $siswa->password );
         if($request->nis == $siswa->nis && $request->nama_siswa == $siswa->nama_siswa && $request->jk == $siswa->jk && $request->alamat == $siswa->alamat && $request->kelas_id == $siswa->kelas_id && $request->password == $siswa->password ){
             return redirect()->back()->with('failed', 'Data Siswa tidak ada yang berubah');
         }

@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-<h1>Tambah Mengajar</h1>
+<h1>Ubah Mengajar</h1>
 </center>
 
 <form action="{{ route('mengajar.update', $mengajar->id) }}" class="container-form" method="POST">
@@ -33,7 +33,7 @@
         </select>
     </div>
 
-    <button type="submit" class="button-primary">Tambah</button>
+    <button type="submit" class="button-primary">Ubah</button>
 </form>
 @endsection
 

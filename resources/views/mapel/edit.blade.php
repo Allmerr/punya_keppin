@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-<h1>Tambah Mapel</h1>
+<h1>Ubah Mapel</h1>
 </center>
 
 <form action="{{ route('mapel.update', $mapel->id) }}" class="container-form" method="POST">

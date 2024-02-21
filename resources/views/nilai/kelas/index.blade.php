@@ -2,8 +2,8 @@
 @section('content')
 <center>
 
-    <h2>Data Niali Kelas {{ $mengajar->kelas->kelas }} {{ $mengajar->kelas->jurusan }} {{ $mengajar->kelas->rombel }}</h2>
-    <a href="{{ route('nilai.kelas.create', $mengajar->id) }}" class="button-primary">Tambah Guru</a>
+    <h2>Data Nilai Kelas {{ $mengajar->kelas->kelas }} {{ $mengajar->kelas->jurusan }} {{ $mengajar->kelas->rombel }}</h2>
+    <a href="{{ route('nilai.kelas.create', $mengajar->id) }}" class="button-primary">Tambah Nilai</a>
     <table class="table-data">
         <thead>
             <tr>

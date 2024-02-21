@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-<h1>Tambah Mengajar</h1>
+<h1>Tambah Nilai</h1>
 </center>
 
 <form action="{{ route('nilai.kelas.store', $mengajar->id) }}" class="container-form" method="POST">
