@@ -25,9 +25,9 @@ class LoginController extends Controller
         $request->validate($rules);
 
         if($request->type_user === 'siswa'){
-            $siswa = Siswa::where('nis', $request->nis)->where('password', $request->password)->first();
+            $siswa = Siswa::where('nis', $request->nis)->first();
 
-            if($siswa == null){
+            if($siswa == null || !Hash::check($request->password, $siswa->password)){
                 return redirect()->back()->with('failed', 'NIS atau Password Salah');
             }else{
                 session([
@@ -36,9 +36,9 @@ class LoginController extends Controller
                 ]);
             }
         }else if($request->type_user === 'guru'){
-            $guru = Guru::where('nip', $request->nip)->where('password', $request->password)->first();
+            $guru = Guru::where('nip', $request->nip)->first();
 
-            if($guru == null){
+            if($guru == null || !Hash::check($request->password, $guru->password)){
                 return redirect()->back()->with('failed', 'NIP atau Password Salah');
             }else{
                 session([
