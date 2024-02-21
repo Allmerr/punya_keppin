@@ -9,7 +9,7 @@
     'mengajar' => $mengajar->id,
     'siswa' => $nilai->siswa->id,
     ]) }}" class="container-form" method="POST">
-
+    @method('put')
     @csrf
     <div class="form-control">
         <label for="siswa_id">siswa</label>

@@ -38,7 +38,7 @@ Route::resource('/mengajar', MengajarController::class)->middleware('CheckUserRo
 Route::get('/nilai/{mengajar}', [NilaiContoller::class, 'nilai_kelas_index'])->middleware('CheckUserRole')->name('nilai.kelas.index');
 Route::get('/nilai/{mengajar}/create', [NilaiContoller::class, 'nilai_kelas_create'])->middleware('CheckUserRole')->name('nilai.kelas.create');
 Route::get('/nilai/{mengajar}/{siswa}/edit', [NilaiContoller::class, 'nilai_kelas_edit'])->middleware('CheckUserRole')->name('nilai.kelas.edit');
-Route::put('/nilai/{mengajar}', [NilaiContoller::class, 'nilai_kelas_update'])->middleware('CheckUserRole')->name('nilai.kelas.update');
+Route::put('/nilai/{mengajar}/{siswa}', [NilaiContoller::class, 'nilai_kelas_update'])->middleware('CheckUserRole')->name('nilai.kelas.update');
 Route::post('/nilai/{mengajar}', [NilaiContoller::class, 'nilai_kelas_store'])->middleware('CheckUserRole')->name('nilai.kelas.store');
 Route::delete('/nilai/{mengajar}/{siswa}/', [NilaiContoller::class, 'nilai_kelas_destroy'])->middleware('CheckUserRole')->name('nilai.kelas.destroy');
 

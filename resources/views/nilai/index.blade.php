@@ -17,7 +17,32 @@
         </div>
 
     @elseif(session('type_user') == 'siswa')
+        <h1>Data Siswa</h1>
 
+        <table class="table-data">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Siswa</th>
+                    <th>UH</th>
+                    <th>UTS</th>
+                    <th>UAS</th>
+                    <th>NA</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($nilais as $nilai)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $nilai->siswa->nama_siswa }}</td>
+                    <td>{{ $nilai->uh }}</td>
+                    <td>{{ $nilai->uts }}</td>
+                    <td>{{ $nilai->uas }}</td>
+                    <td>{{ $nilai->na }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endif
 
 </center>

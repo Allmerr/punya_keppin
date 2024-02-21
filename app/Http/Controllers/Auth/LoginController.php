@@ -47,9 +47,9 @@ class LoginController extends Controller
                 ]);
             }
         }else if($request->type_user === 'admin'){
-            $admin = Administrator::where('kode_admin', $request->kode_admin)->where('password', $request->password)->first();
+            $admin = Administrator::where('kode_admin', $request->kode_admin)->first();
 
-            if($admin == null){
+            if($admin == null || !Hash::check($request->password, $admin->password)){
                 return redirect()->back()->with('failed', 'Kode Admin atau Password Salah');
             }else{
                 session([
